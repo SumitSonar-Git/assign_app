@@ -53,11 +53,11 @@ class _SelectCourierPageState extends State<SelectCourierPage> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Add search functionality
-            },
-          ),
+          icon: Image.asset('assets/images/search_icon.png'),
+          onPressed: () {
+            // Navigator.pop(context);
+            }
+        ),
         ],
       ),
       body: Padding(
@@ -195,7 +195,7 @@ class _SelectCourierPageState extends State<SelectCourierPage> {
                   // Add continue action
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 252, 133, 6),
+                  backgroundColor: Color.fromRGBO(250, 77, 36, 1),
                   padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),

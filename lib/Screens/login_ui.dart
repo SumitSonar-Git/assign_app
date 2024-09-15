@@ -14,7 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  bool _rememberMe = false;
+  bool _rememberMe = true;
 
   Future<void> _signIn() async {
     String email = _emailController.text.trim();
@@ -94,16 +94,16 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height:5),
               const Text(
                 'Sign in to continue',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 17,
-                  color: Colors.grey,
+                  fontSize: 18,
+                  color: Color.fromARGB(129, 1, 1, 0),
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 5),
               Container(
                 padding: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
@@ -127,9 +127,14 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     TextField(
                       controller: _emailController,
+                      
                       decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
+                        
                         prefixIcon: const Icon(Icons.email, color: Colors.green),
-                        labelText: 'Email',
+                        labelText: 'johndoe@mail.com',
+                        
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -140,8 +145,11 @@ class _LoginPageState extends State<LoginPage> {
                       controller: _passwordController,
                       obscureText: true,
                       decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                         prefixIcon: const Icon(Icons.lock, color: Colors.green),
-                        labelText: 'Password',
+                       
+                        labelText: '**********************',
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -155,13 +163,13 @@ class _LoginPageState extends State<LoginPage> {
                           activeColor: Colors.green,
                           onChanged: (bool? value) {
                             setState(() {
-                              _rememberMe = value ?? false;
+                              _rememberMe = value ?? true;
                             });
                           },
                         ),
                         const Text(
                           'Remember me',
-                          style: TextStyle(color: Colors.grey, fontSize: 15),
+                          style: TextStyle(color: Color.fromARGB(129, 1, 1, 0), fontSize: 15),
                         ),
                         const Spacer(),
                         TextButton(
@@ -169,13 +177,13 @@ class _LoginPageState extends State<LoginPage> {
                           child: const Text(
                             'Forgot Password?',
                             style: TextStyle(
-                              color: Colors.grey,
+                              color: Color.fromARGB(129, 1, 1, 0),
                             ),
                           ),
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 10),
                     Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -206,7 +214,7 @@ class _LoginPageState extends State<LoginPage> {
                           'Sign In',
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.white,
+                            color: Colors.black,
                             fontFamily: 'Supermercado',
                           ),
                         ),
@@ -225,7 +233,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: const Text(
                         'Create a new account',
                         style: TextStyle(
-                          color: Color.fromARGB(255, 161, 91, 1),
+                          color: Color.fromARGB(255, 255, 147, 7),
                           fontSize: 16,
                         ),
                       ),

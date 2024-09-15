@@ -21,7 +21,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
 
-  bool _agreeToTerms = false;
+  bool _agreeToTerms = true;
 
   Future<void> _signUp() async {
     String email = _emailController.text.trim();
@@ -160,6 +160,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       child: TextField(
                         controller: _fullNameController,
                         decoration: const InputDecoration(
+                           filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                           labelText: 'Full Name',
                           border: OutlineInputBorder(),
                         ),
@@ -171,6 +173,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       child: TextField(
                         controller: _phoneController,
                         decoration: const InputDecoration(
+                           filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                           labelText: 'Phone number',
                           border: OutlineInputBorder(),
                         ),
@@ -182,6 +186,8 @@ class _SignUpPageState extends State<SignUpPage> {
                       child: TextField(
                         controller: _emailController,
                         decoration: const InputDecoration(
+                           filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                           labelText: 'Email',
                           border: OutlineInputBorder(),
                         ),
@@ -194,6 +200,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         controller: _passwordController,
                         obscureText: true,
                         decoration: const InputDecoration(
+                           filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                           labelText: 'Password',
                           border: OutlineInputBorder(),
                         ),
@@ -206,6 +214,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         controller: _confirmPasswordController,
                         obscureText: true,
                         decoration: const InputDecoration(
+                           filled: true,
+                        fillColor: Color.fromARGB(231, 199, 255, 195),
                           labelText: 'Confirm Password',
                           border: OutlineInputBorder(),
                         ),
@@ -256,7 +266,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           'Sign Up',
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.white,
+                            color: Colors.black,
                             fontFamily: 'Supermercado',
                           ),
                         ),
