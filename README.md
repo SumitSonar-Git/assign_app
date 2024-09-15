@@ -13,7 +13,7 @@ Vector Image (Line between Green and Red Circles on the Home Page): I was unable
 
 # How to Run the App
 1) Clone this repository:
-git clone https://github.com/your-repo-link
+git clone https://github.com/SumitSonar-Git/assign_app.git
 
 2) Navigate to the project directory:
 cd project-directory
